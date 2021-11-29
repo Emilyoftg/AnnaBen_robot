@@ -483,63 +483,69 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "filter":
-        buttons= [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+    elif query.data == "source":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SOURCE_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "manualfilter":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='auto_manual'),
+            InlineKeyboardButton('Buttons »', callback_data='button')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MANUALFILTER_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "button":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='manualfilter')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.BUTTON_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "autofilter":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='auto_manual')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.AUTOFILTER_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "auto_manual":
+        buttons = [[
+            InlineKeyboardButton('auto', callback_data='autofilter'),
+            InlineKeyboardButton('manual', callback_data='manualfilter')
             ],[
-            InlineKeyboardButton('Back', callback_data='help'),
-            InlineKeyboardButton('Close', callback_data='close_data')
-       ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.FILTER_TXT.format(temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "song":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
+            InlineKeyboardButton('« Back', callback_data='help'),
+            InlineKeyboardButton('Close ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.SONG_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "whois":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.WHOIS_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "json":
-        buttons = [[ 
-            InlineKeyboardButton('Back', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.JSON_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "pin":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.PIN_TXT,
+            text=script.AUTO_MANUAL_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
     elif query.data == "fun":
         buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='filter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -547,86 +553,115 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )         
-    elif query.data == "imbd":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.IMBD_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )         
-    elif query.data == "source":
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='about'),
-            InlineKeyboardButton('☎️ Contact Us', url='https://t.me/TomHiiddleston')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SOURCE_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "manuelfilter":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help'),
-            InlineKeyboardButton('Buttons', callback_data='button')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.MANUELFILTER_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "button":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='manuelfilter')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.BUTTON_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-    elif query.data == "autofilter":
-        buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.AUTOFILTER_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
     elif query.data == "coct":
         buttons = [[
-            InlineKeyboardButton('Back', callback_data='help')
+            InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.CONNECTION_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "extra":
+    elif query.data == "paste":
         buttons = [[
-            InlineKeyboardButton('Back', callback_data='help'),
-            InlineKeyboardButton('Admin', callback_data='admin')
+            InlineKeyboardButton('« Back', callback_data='help'),
+            InlineKeyboardButton('Close ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.EXTRAMOD_TXT,
+            text=script.PASTE_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "tgraph":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.TGRAPH_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "info":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.INFO_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "search":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SEARCH_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "gtrans":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help'),
+            InlineKeyboardButton('lang codes', url='https://cloud.google.com/translate/docs/languages')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.GTRANS_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('Extra', callback_data='extra')
+            InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "zombies":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ZOMBIES_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "purge":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PURGE_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "restric":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.RESTRIC_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
