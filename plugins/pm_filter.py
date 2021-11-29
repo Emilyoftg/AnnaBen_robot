@@ -449,7 +449,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('Filters', callback_data='auto_manual'),
             InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Misc', callback_data='imbd')
+            InlineKeyboardButton('Misc', callback_data='info')
             ],[
             InlineKeyboardButton('Fun', callback_data='fun'),
             InlineKeyboardButton('Song', callback_data='song'),
