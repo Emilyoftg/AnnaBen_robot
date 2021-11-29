@@ -1,111 +1,78 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚢 𝚗𝚊𝚖𝚎 , <a href='https://t.me/Dqautofl_bot'>𝐀𝐍𝐍𝐀 𝐁𝐄𝐍</a>, 𝙸𝚝'𝚜 𝚟𝚎𝚛𝚢 𝚎𝚊𝚜𝚢 𝚓𝚞𝚜𝚝 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚍𝚖𝚒𝚗, 𝚃𝚑𝚊𝚝𝚜 𝚊𝚕𝚕 𝙸'𝚕𝚕 𝚙𝚛𝚘𝚟𝚒𝚍𝚎 𝚖𝚘𝚟𝚒𝚎𝚜 𝚝𝚑𝚎𝚛𝚎 🤓
-"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝘏𝘦𝘳𝘦 𝘐𝘴 𝘛𝘩𝘦 𝘏𝘦𝘭𝘱 𝘍𝘰𝘳 𝘔𝘺 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴."""
+    START_TXT = """<b>Hello {},
+I A Telegram Auto Filter Bot.Its Easy To Use Me ):\nJust Add Me To Your Group As Admin,Hit The Help Button For More Info</b>"""
+    HELP_TXT = """<b>Hey {}
+Here Is The Help For My Commands.</b>"""
     ABOUT_TXT = """
-𝗧𝗛𝗜𝗦 𝗔𝗡𝗡𝗔 𝗕𝗘𝗡'𝗦 𝗔𝗕𝗢𝗨𝗧 𝗠𝗦𝗚
-✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵
-╔════❰ ꪖ᥇ꪮꪊ𝓽 ꪑ𝘴ᧁ ❱═❍⊱❁۪۪
-║╭━━━━━━━━━━━━━━━➣ 
-║┣⪼ 𝙈𝙔 𝙉𝘼𝙈𝙀 - <a href="https://t.me/Dqautofl_Bot"> 𝑨𝑵𝑵𝑨 𝑩𝑬𝑵 </a>
-║┣⪼ Ⓓ︎Ⓔ︎Ⓥ︎1 - <a href="https://t.me/pro_editor_tg"> 🅛︎🅐︎🅛︎🅛︎🅤︎ᵗᵍ </a>
-║┣⪼ Ⓓ︎Ⓔ︎Ⓥ︎2 - <a href="https://t.me/PANDITHAN_SIR"> ⸙ꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋM-STER </a>
-║┣⪼ 𝓛𝓲𝓫𝓻𝓪𝓻𝓻𝔂 - 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-║┣⪼ 𝓛𝓪𝓷𝓰𝓾𝓪𝓰𝓮 - 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-║┣⪼ 𝓓𝓪𝓽𝓪 𝓑𝓪𝓼𝓮 - 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-║┣⪼ 𝓑𝓸𝓽 𝓼𝓮𝓻𝓿𝓮𝓻 -  𝙷𝙴𝚁𝙾𝙺𝚄
-║┣⪼ 𝓑𝓾𝓲𝓵𝓭 𝓢𝓽𝓪𝓽𝓾𝓼 - v1.0.1 [ 𝙱𝙴𝚃𝙰 ]
-║╰━━━━━━━━━━━━━━━➣ ╚══════════════════❍⊱❁۪۪"""
-    SOURCE_TXT = """<b>NOTE:</b>
-- 𝑰 𝒂𝒎  𝒂 𝒐𝒑𝒆𝒏 𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒓𝒐𝒋𝒆𝒄𝒕. 
-- ՏOᑌᖇᑕᗴ ᑕOᗪᗴ - <a href="https://github.com/Lallu-lallus/AnnaBen_robot"> 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 </a>
-
-𝗠𝗔𝗦𝗧𝗘𝗥:
-<a href="https://t.me/team_annaben"> 𝑻𝑬𝑨𝑴 𝑨𝑵𝑵𝑨 </a>"""
+<b>➥  My Name</b> : <b><i><a href="https://t.me/MC_MovieBot">Mᴏᴠɪᴇ Bᴏᴛ 😎</a></i></b>
+<b>➥  Owner</b> : <b><i><a href="https://t.me/NickxFury">Nɪᴄᴋ Fᴜʀʏ 🇮🇳</a></i></b>
+<b>➥ Credits</b> : <code>Everyone in this journey</code>
+<b>➥ Data base</b> : <b><a href="https://www.mongodb.com/">MongoDB</a></b>
+<b>➥ Language</b> : <code>Python3</code>
+<b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram Asyncio 1.13.0 </a></i>
+<b>➥ Server</b> : <code>AWS</code>
+<b>➥ Build Stats</b> : <code>V6.0 [BETA]</code>
+©️MᴀɪɴᴛᴀɪɴᴇD Bʏ  <a href=https://t.me/MOVIECLUB_CHAT>Mᴏᴠɪᴇ Cʟᴜʙ</a>"""
+    SOURCE_TXT = """
+<code>All the files in this bot are freely available on the internet or posted by somebody else.This bot is indexing files which are already uploaded on Telegram for easy of searching, We respect all the copyright laws and works in compliance with DMCA and EUCD. If anything is against law please contact us so that it can be removed asap.</code>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
 Note:- Give a user details
 
 •/whois :-give a user full details"""
-    SONG_TXT ="""<b>SONG MODULE</b>
-Song Download
-Song Download Module, For Those Who Love Music
-
-🎈 Command
+    SONG_TXT ="""<b>Help SONG</b>
+Bot Sends The Request Songs, For Those Who Love Music
 
 - /song [Song Name] - To Download Music
-
-Usage
 - working pm and groups"""
-    JSON_TXT ="""<b>JSON MODULE</b>
-JSON:
-Bot returns json for all replied messages with /json
+    JSON_TXT ="""<b>Help JSON:
+𝖡𝗈𝗍 𝗋𝖾𝗍𝗎𝗋𝗇𝗌 𝗃𝗌𝗈𝗇 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝗐𝗂𝗍𝗁 /json. 
+𝖥𝖾𝖺𝗍𝗎𝗋𝖾𝗌:
+𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝖤𝖽𝗂𝗍𝗍𝗂𝗇𝗀 JSON
+𝖯𝗆 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 
+𝖦𝗋𝗈𝗎𝗉 𝖲𝗎𝗉𝗉𝗈𝗋𝗍
+/Json 𝖠𝗅𝗍𝖾𝗋𝗇𝖺𝗍𝗂𝗏𝖾𝗌:
+/js or /showjson or /json</b>"""
+    PIN_TXT ="""<b>𝖯𝗂𝗇:  
+𝖠𝗅𝗅 𝗍𝗁𝖾 𝗉𝗂𝗇 𝗋𝖾𝗅𝖺𝗍𝖾𝖽 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖼𝖺𝗇 𝖻𝖾 𝖿𝗈𝗎𝗇𝖽 𝗁𝖾𝗋𝖾; 𝗄𝖾𝖾𝗉 𝗒𝗈𝗎𝗋 𝖼𝗁𝖺𝗍 𝗎𝗉 𝗍𝗈 𝖽𝖺𝗍𝖾 𝗈𝗇 𝗍𝗁𝖾 𝗅𝖺𝗍𝖾𝗌𝗍 𝗇𝖾𝗐𝗌 𝗐𝗂𝗍𝗁 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾 𝗉𝗂𝗇𝗇𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾!  
 
-Features:
-Message Editting JSON
-Pm Support
-Group Support
-
-Note:
-Everyone can use this command , if spaming happens bot will automatically ban you from the group"""
-    PIN_TXT ="""<b>PIN MODULE</b>
-
-<b>Pin :</b>
-
-<b>All The Pin Related Commands Can Be Found Here; Keep Your Chat Up To Date On The Latest News With A Simple Pinned Message!</b>
-
-<b>📚 Commands & Usage:</b>
-
-◉ /Pin :- Pin The Message You Replied To Message To Send A Notification To Group Members
-
-◉ /Unpin :- Unpin The Current Pinned Message. If Used As A Reply, Unpins The Replied To Message"""
-    FUN_TXT ="""<b>FUN MODULE</b> 
-    
-<b>🎲 NOTHING MUCH JUST SOME FUN THINGS</b>
+𝖠𝖽𝗆𝗂𝗇 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌: 
+- /pin: 𝖯𝗂𝗇 𝗍𝗁𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗒𝗈𝗎 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗍𝗈 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗈 𝗌𝖾𝗇𝖽 𝖺 𝗇𝗈𝗍𝗂𝖿𝗂𝖼𝖺𝗍𝗂𝗈𝗇 𝗍𝗈 𝗀𝗋𝗈𝗎𝗉 𝗆𝖾𝗆𝖻𝖾𝗋𝗌. 
+- /unpin: 𝖴𝗇𝗉𝗂𝗇 𝗍𝗁𝖾 𝖼𝗎𝗋𝗋𝖾𝗇𝗍 𝗉𝗂𝗇𝗇𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾. 𝖨𝖿 𝗎𝗌𝖾𝖽 𝖺𝗌 𝖺 𝗋𝖾𝗉𝗅𝗒, 𝗎𝗇𝗉𝗂𝗇𝗌 𝗍𝗁𝖾 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗍𝗈 𝗆𝖾𝗌𝗌𝖺𝗀𝖾.</b>"""
+    FUN_TXT ="""<b>𝖧𝖾𝗅𝗉: 𝖥𝗎𝗇 𝖬𝗈𝖽𝗎𝗅𝖾: 
+𝖭𝗈𝗍𝗁𝗂𝗇𝗀 𝖬𝗎𝖼𝗁 𝖩𝗎𝗌𝗍 𝖲𝗈𝗆𝖾 𝖫𝗂𝗍𝗍𝗅𝖾 𝖳𝗂𝗆𝖾𝖯𝖺𝗌𝗌𝖾𝗌 𝖶𝗂𝗍𝗁 𝖠𝗇𝗂𝗆𝖺𝗍𝖾𝖽𝖣𝖺𝗋𝗍𝗌
+ 𝖳𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍: 
 t𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍: 
 𝟣. /dice - Roll The Dice 
 𝟤. /Throw 𝗈𝗋 /Dart - 𝖳𝗈 𝖬𝖺𝗄𝖾 Drat 
 3. /Runs - Jokes 
-4. /Goal or /Shoot - To Make A Goal Or Shoot"""
-    MANUALFILTER_TXT = """Help: <b>Filters</b>
-
-- Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
-
+4. /Goal or /Shoot - To Make A Goal Or Shoot</b>"""
+     MANUELFILTER_TXT = """Help: <b>Filters</b>
+- Filter is the feature were users can set automated replies for a particular keyword and the bot will respond whenever a keyword is found the message
 <b>NOTE:</b>
-1. IMDb should have admin privillage.
-2. Only admins can add filters in a chat.
-3. Alert buttons have a limit of 64 characters.
-
+1. Bot should have admin privillage.
+2. only admins can add filters in a chat.
+3. alert buttons have a limit of 64 characters.
 <b>Commands and Usage:</b>
-• /filter - add a filter in chat.
-• /filters - list all the filters of a chat.
-• /del - delete a specific filter in chat.
-• /delall - delete the whole filters in a chat (chat owner only)."""
-
+• /filter - <code>add a filter in chat</code>
+• /filters - <code>list all the filters of a chat</code>
+• /del - <code>delete a specific filter in chat</code>
+• /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
-
-- tgmoviebot support both url and alert inline buttons.
-
+- <a href=https://t.me/MC_MovieBot>This Bot</a> Supports both url and alert inline buttons.
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. IMDb supports buttons with any telegram media type.
-3. Buttons should be properly parsed as markdown format.
-
+2. Bot supports buttons with any telegram media type.
+3. Buttons should be properly parsed as markdown format
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/josprojects)</code>
-
+<code>[Button Text](buttonurl:https://t.me/MOVIECLUB_CHAT)</code>
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
-
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
-
 <b>NOTE:</b>
 1. Make me the admin of your channel if it's private.
-2. Make sure that your channel does not contains camrips, porn and fake files.
+2. make sure that your channel does not contains camrips, porn and fake files.
 3. Forward the last message to me with quotes.
  I'll add all the files in that channel to my db."""
-
     CONNECTION_TXT = """Help: <b>Connections</b>
 
 - Used to connect bot to PM for managing filters 
@@ -122,7 +89,7 @@ t𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍:
 
     AUTO_MANUAL_TXT = """Help: <b>Filters</b>
 
-<b>Select a filters type Below:</b>"""
+<b>Select A Filters Fype Below:</b>"""
 
     PASTE_TXT = """Help: <b>Paste</b>
 
@@ -149,19 +116,19 @@ Do as you wish with telegra.ph module!
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
-    INFO_TXT = """Help: <b>Information</b>
-
-Get information about something!
-
+    INFO_TXT = """𝖧𝖾𝗅𝗉: 🐶 𝖲𝗁𝗈𝗐 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 
+𝖭𝖮𝖳𝖤: 𝗍𝗁𝖾𝗌𝖾 𝖺𝗋𝖾 𝗍𝗁𝖾 𝖾𝗑𝗍𝗋𝖺 𝖿𝖾𝖺𝗍𝗎𝗋𝖾𝗌 𝗈𝖿 Me 
+𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖴𝗌𝖺𝗀𝖾: 
 <b>Commands and Usage:</b>
-• /id - get id of a specifed user.
-• /info  - get information about a user.
-• /json - get the json details of a message.
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on both pm and group.
-• These commands can be used by any group member."""
+• /id - <code>get id of a specifed user.</code>
+• /info  - <code>get information about a user.</code>
+• /imdb  - <code>get the film information from IMDb source.</code>
+• /search  - <code>get the film information from various sources.</code>
+• /tr [language code][reply] - translate replied message to specific language.
+• /purge - delete all messages from the replied to message, to the current message.
+• /paste [text] - paste the given text on Pasty.
+• /paste [reply] - paste the replied text on Pasty.
+• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph."""
 
     GTRANS_TXT = """Help: <b>Google Translator</b>
 
@@ -200,27 +167,16 @@ Need to delete lots of messages? That's what purges are for!
 • These commands works on group.
 • These commands can be used by Only admin."""
 
-    RESTRIC_TXT = """Help: <b>Restrictions</b>
-
-Some people need to be publicly banned; spammers, annoyances, or just trolls.
-
-This module allows you to do that easily, by exposing some common actions, so everyone will see!
-
-<b>Commands and Usage:</b>
-• /ban - ban a user.
-• /tban - temporarily ban a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
-• /mute - mute a user.
-• /tmute - temporarily mute a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
-• /unban or /unmute - unmute a user & unban a user.
-
-<b>Examples:</b>
-- Mute a user for two hours.
--> <code>/tmute @username 2h</code>
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on group.
-• These commands can be used by Only admin."""
+    RESTRIC_TXT = """<b>𝖡𝖺𝗇𝗌:  
+𝖲𝗈𝗆𝖾 𝗉𝖾𝗈𝗉𝗅𝖾 𝗇𝖾𝖾𝖽 𝗍𝗈 𝖻𝖾 𝗉𝗎𝖻𝗅𝗂𝖼𝗅𝗒 𝖻𝖺𝗇𝗇𝖾𝖽; 𝗌𝗉𝖺𝗆𝗆𝖾𝗋𝗌, 𝖺𝗇𝗇𝗈𝗒𝖺𝗇𝖼𝖾𝗌, 𝗈𝗋 𝗃𝗎𝗌𝗍 𝗍𝗋𝗈𝗅𝗅𝗌.  
+𝖳𝗁𝗂𝗌 𝗆𝗈𝖽𝗎𝗅𝖾 𝖺𝗅𝗅𝗈𝗐𝗌 𝗒𝗈𝗎 𝗍𝗈 𝖽𝗈 𝗍𝗁𝖺𝗍 𝖾𝖺𝗌𝗂𝗅𝗒, 𝖻𝗒 𝖾𝗑𝗉𝗈𝗌𝗂𝗇𝗀 𝗌𝗈𝗆𝖾 𝖼𝗈𝗆𝗆𝗈𝗇 𝖺𝖼𝗍𝗂𝗈𝗇𝗌, 𝗌𝗈 𝖾𝗏𝖾𝗋𝗒𝗈𝗇𝖾 𝗐𝗂𝗅𝗅 𝗌𝖾𝖾!   
+𝖠𝖽𝗆𝗂𝗇 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌: 
+- /ban: 𝖡𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋. 
+- /tban: 𝖳𝖾𝗆𝗉𝗈𝗋𝖺𝗋𝗂𝗅𝗒 𝖻𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋. 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 𝗍𝗂𝗆𝖾 𝗏𝖺𝗅𝗎𝖾𝗌: 𝟦𝗆 = 𝟦 𝗆𝗂𝗇𝗎𝗍𝖾𝗌, 𝟥𝗁 = 𝟥 𝗁𝗈𝗎𝗋𝗌, 𝟨𝖽 = 𝟨 𝖽𝖺𝗒𝗌, 𝟧𝗐 = 𝟧 𝗐𝖾𝖾𝗄𝗌. 
+- /unban: 𝖴𝗇𝖻𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋.  
+𝖤𝗑𝖺𝗆𝗉𝗅𝖾𝗌:
+ - 𝖡𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋 𝖿𝗈𝗋 𝗍𝗐𝗈 𝗁𝗈𝗎𝗋𝗌. 
+-> /tban @𝗎𝗌𝖾𝗋𝗇𝖺𝗆𝖾 𝟤𝗁</b>"""
 
     ADMIN_TXT = """Help: <b>Admin Mods</b>
 
