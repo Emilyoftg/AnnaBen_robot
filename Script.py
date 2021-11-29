@@ -92,7 +92,7 @@ t𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍:
 Do as you wish with telegra.ph module!
 
 <b>Commands and Usage:
-• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph</b>.
+• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph</b>."""
 
     INFO_TXT = """<b>𝖧𝖾𝗅𝗉: 🐶 𝖲𝗁𝗈𝗐 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 
 𝖭𝖮𝖳𝖤: 𝗍𝗁𝖾𝗌𝖾 𝖺𝗋𝖾 𝗍𝗁𝖾 𝖾𝗑𝗍𝗋𝖺 𝖿𝖾𝖺𝗍𝗎𝗋𝖾𝗌 𝗈𝖿 Me 
