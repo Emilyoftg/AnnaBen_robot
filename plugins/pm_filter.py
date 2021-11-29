@@ -457,11 +457,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('PIN', callback_data='pin'),
             InlineKeyboardButton('Json', callback_data='json'),
-            InlineKeyboardButton('Ban', callback_data='restric')
+            InlineKeyboardButton('Bans', callback_data='restric')
             ],[
             InlineKeyboardButton('Back', callback_data='start'), 
             InlineKeyboardButton('Status', callback_data='stats'),
-            InlineKeyboardButton('Zombies', callback_data='zombies')
+            InlineKeyboardButton('Inactive', callback_data='zombies')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -561,8 +561,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "auto_manual":
         buttons = [[
-            InlineKeyboardButton('auto', callback_data='autofilter'),
-            InlineKeyboardButton('manual', callback_data='manualfilter')
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter'),
+            InlineKeyboardButton('Manual Filter', callback_data='manualfilter')
             ],[
             InlineKeyboardButton('« Back', callback_data='help'),
             InlineKeyboardButton('Close ✗', callback_data='close_data')
