@@ -46,7 +46,7 @@ t𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍:
 𝟤. /Throw 𝗈𝗋 /Dart - 𝖳𝗈 𝖬𝖺𝗄𝖾 Drat 
 3. /Runs - Jokes 
 4. /Goal or /Shoot - To Make A Goal Or Shoot</b>"""
-     MANUELFILTER_TXT = """Help: <b>Filters</b>
+    MANUELFILTER_TXT = """Help: <b>Filters</b>
 - Filter is the feature were users can set automated replies for a particular keyword and the bot will respond whenever a keyword is found the message
 <b>NOTE:</b>
 1. Bot should have admin privillage.
