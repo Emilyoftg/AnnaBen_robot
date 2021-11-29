@@ -857,12 +857,11 @@ async def auto_filter(client, msg, spoll=False):
 async def advantage_spell_chok(msg):
     query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)", "", msg.text, flags=re.IGNORECASE) # plis contribute some common words 
     query = query.strip() + " movie"
-    search = msg.text
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply(f"Hey, {msg.from_user.mention}! I couldn't find any movie in that name.")
+        k = await msg.reply(f"Hey {msg.from_user.mention} I couldn't find any movie in that name.")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -888,15 +887,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        hmm = InlineKeyboardMarkup(
-        [
-            [
-                 InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
-            ]
-        ]
-    )
-        k = await msg.reply(f"Hey, {msg.from_user.mention}!.. Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=hmm)
-        await asyncio.sleep(60)
+        k = await msg.reply(f"Hey {msg.from_user.mention} I couldn't find anything related to that. Check your spelling")
+        await asyncio.sleep(8)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
