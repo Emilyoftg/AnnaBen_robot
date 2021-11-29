@@ -15,15 +15,11 @@ Here Is The Help For My Commands.</b>"""
 ©️MᴀɪɴᴛᴀɪɴᴇD Bʏ  <a href=https://t.me/MOVIECLUB_CHAT>Mᴏᴠɪᴇ Cʟᴜʙ</a>"""
     SOURCE_TXT = """
 <code>All the files in this bot are freely available on the internet or posted by somebody else.This bot is indexing files which are already uploaded on Telegram for easy of searching, We respect all the copyright laws and works in compliance with DMCA and EUCD. If anything is against law please contact us so that it can be removed asap.</code>"""
-    WHOIS_TXT ="""<b>WHOIS MODULE</b>
-Note:- Give a user details
-
-•/whois :-give a user full details"""
-    SONG_TXT ="""<b>Help SONG</b>
+    SONG_TXT ="""<b>Help SONG
 Bot Sends The Request Songs, For Those Who Love Music
 
 - /song [Song Name] - To Download Music
-- working pm and groups"""
+- Working Pm And Groups</b>"""
     JSON_TXT ="""<b>Help JSON:
 𝖡𝗈𝗍 𝗋𝖾𝗍𝗎𝗋𝗇𝗌 𝗃𝗌𝗈𝗇 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝗐𝗂𝗍𝗁 /json. 
 𝖥𝖾𝖺𝗍𝗎𝗋𝖾𝗌:
@@ -91,81 +87,23 @@ t𝗋𝗒 𝗍𝗁𝗂𝗌 𝖮𝗎𝗍:
 
 <b>Select A Filters Fype Below:</b>"""
 
-    PASTE_TXT = """Help: <b>Paste</b>
-
-Paste some texts or documents on a website!
-
-<b>Commands and Usage:</b>
-• /paste [text] - paste the given text on Pasty
-• /paste [reply] - paste the replied text on Pasty
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on both pm and group.
-• These commands can be used by any group member."""
-
-    TGRAPH_TXT = """Help: <b>TGraph & Paste</b>
+    TGRAPH_TXT = """Help: <b>TGraph & Paste
 
 Do as you wish with telegra.ph module!
 
-<b>Commands and Usage:</b>
-• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph.
+<b>Commands and Usage:
+• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph</b>.
 
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on both pm and group.
-• These commands can be used by any group member."""
-
-    INFO_TXT = """𝖧𝖾𝗅𝗉: 🐶 𝖲𝗁𝗈𝗐 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 
+    INFO_TXT = """<b>𝖧𝖾𝗅𝗉: 🐶 𝖲𝗁𝗈𝗐 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 
 𝖭𝖮𝖳𝖤: 𝗍𝗁𝖾𝗌𝖾 𝖺𝗋𝖾 𝗍𝗁𝖾 𝖾𝗑𝗍𝗋𝖺 𝖿𝖾𝖺𝗍𝗎𝗋𝖾𝗌 𝗈𝖿 Me 
-𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖴𝗌𝖺𝗀𝖾: 
-<b>Commands and Usage:</b>
+Commands and Usage:
 • /id - <code>get id of a specifed user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>
-• /tr [language code][reply] - translate replied message to specific language.
-• /purge - delete all messages from the replied to message, to the current message.
-• /paste [text] - paste the given text on Pasty.
-• /paste [reply] - paste the replied text on Pasty.
-• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph."""
-
-    GTRANS_TXT = """Help: <b>Google Translator</b>
-
-Translate texts to a specific language!
-
-<b>Commands and Usage:</b>
-• /tr [language code][reply] - translate replied message to specific language.
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on both pm and group.
-• IMDb can translate texts to 200+ languages."""
-
-    SEARCH_TXT = """Help: <b>IMDb</b>
-
-Search many things without leaving telegram!
-
-<b>Commands and Usage:</b>
-• /imdb  - get the film information from IMDb source.
-• /search  - get the film information from various sources.
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• More search tools can be found on inline.
-• Those commands works on both pm and group."""
-
-    PURGE_TXT = """Help: <b>Purge</b>
-
-Need to delete lots of messages? That's what purges are for!
-
-<b>Commands and Usage:</b>
-• /purge - delete all messages from the replied to message, to the current message.
-
-<b>NOTE:</b>
-• IMDb should have admin privillage.
-• These commands works on group.
-• These commands can be used by Only admin."""
+• /info or /whois - <code>get information about a user.</code>
+•/imdb or /search - <code>get the film information from various sources.</code>
+• /tr [language code][reply] - <code>translate replied message to specific language.</code>
+• /purge - <code>delete all messages from the replied to message, to the current message.</code>
+• /paste [text] - <code>paste the given text on Pasty.</code>
+• /paste [reply] - <code>paste the replied text on Pasty.</code></b>"""
 
     RESTRIC_TXT = """<b>𝖡𝖺𝗇𝗌:  
 𝖲𝗈𝗆𝖾 𝗉𝖾𝗈𝗉𝗅𝖾 𝗇𝖾𝖾𝖽 𝗍𝗈 𝖻𝖾 𝗉𝗎𝖻𝗅𝗂𝖼𝗅𝗒 𝖻𝖺𝗇𝗇𝖾𝖽; 𝗌𝗉𝖺𝗆𝗆𝖾𝗋𝗌, 𝖺𝗇𝗇𝗈𝗒𝖺𝗇𝖼𝖾𝗌, 𝗈𝗋 𝗃𝗎𝗌𝗍 𝗍𝗋𝗈𝗅𝗅𝗌.  
