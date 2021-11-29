@@ -6,11 +6,12 @@ from Script import script
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from database.ia_filterdb import Media, get_file_details
+from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, LOG_CHANNEL, PICS
 from utils import get_size, is_subscribed, temp
 
+import re
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
@@ -18,10 +19,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/annaben_updates')
+                InlineKeyboardButton('🤖 Updates', url='https://t.me/MCMovieBot')
             ],
             [
-                InlineKeyboardButton('𝙷𝙴𝙻𝙿', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -37,13 +38,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/dqautofl_bot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/EDIT_REPO')
+            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/MCMovieBot')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -62,29 +63,29 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🔌 Join Channel", url=invite_link.invite_link
                 )
             ]
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton("𝚃𝚁𝚈 𝙰𝙶𝙰𝙸𝙽", callback_data=f"checksub#{message.command[1]}")])
+            btn.append([InlineKeyboardButton("⏳  Try Again", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="♦️ **READ THIS INSTRUCTION** ♦️\n\n🗣 __ഗ്രൂപ്പിൽ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..__😍\n\n🗣 __In Order To Get The Movies Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group Or Click Try Again Button. I'll Send You That Movie Privately__ 🙈 \n\n👇 **JOIN THIS CHANNEL & TRY** 👇",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/dqautofl_bot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/EDIT_REPO')
+            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/EvaMariaUpdates')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -106,7 +107,7 @@ async def start(client, message):
         try:
             f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
         except Exception as e:
-            print(e)
+            logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
@@ -173,16 +174,35 @@ async def delete(bot, message):
     else:
         await msg.edit('This is not supported file format')
         return
+    
+    file_id, file_ref = unpack_new_file_id(media.file_id)
 
     result = await Media.collection.delete_one({
-        'file_name': media.file_name,
-        'file_size': media.file_size,
-        'mime_type': media.mime_type
+        '_id': file_id,
     })
     if result.deleted_count:
         await msg.edit('File is successfully deleted from database')
     else:
-        await msg.edit('File not found in database')
+        file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
+        result = await Media.collection.delete_one({
+            'file_name': file_name,
+            'file_size': media.file_size,
+            'mime_type': media.mime_type
+            })
+        if result.deleted_count:
+            await msg.edit('File is successfully deleted from database')
+        else:
+            # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
+            # have original file name.
+            result = await Media.collection.delete_one({
+                'file_name': media.file_name,
+                'file_size': media.file_size,
+                'mime_type': media.mime_type
+            })
+            if result.deleted_count:
+                await msg.edit('File is successfully deleted from database')
+            else:
+                await msg.edit('File not found in database')
 
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
