@@ -40,7 +40,8 @@ Bot Sends The Request Songs, For Those Who Love Music
 𝟣. /dice - Roll The Dice 
 𝟤. /Throw 𝗈𝗋 /Dart - 𝖳𝗈 𝖬𝖺𝗄𝖾 Drat 
 3. /Runs - Jokes 
-4. /Goal or /Shoot - To Make A Goal Or Shoot</b>"""
+4. /Goal or /Shoot - To Make A Goal Or Shoot
+5. /luck or /cownd - Spin the Lucky"""
     MANUALFILTER_TXT = """Help: <b>Filter
 - Filter is the feature were users can set automated replies for a particular keyword and the bot will respond whenever a keyword is found the message
 NOTE:
@@ -103,7 +104,8 @@ Commands and Usage:
 • /tr [language code][reply] - <code>translate replied message to specific language.</code>
 • /purge - <code>delete all messages from the replied to message, to the current message.</code>
 • /paste [text] - <code>paste the given text on Pasty.</code>
-• /paste [reply] - <code>paste the replied text on Pasty.</code></b>"""
+• /paste [reply] - <code>paste the replied text on Pasty.</code>
+• /tts - <code>Reply to any text message with language code to convert as audio.</code></b>"""
 
     RESTRIC_TXT = """<b>𝖡𝖺𝗇𝗌:  
 𝖲𝗈𝗆𝖾 𝗉𝖾𝗈𝗉𝗅𝖾 𝗇𝖾𝖾𝖽 𝗍𝗈 𝖻𝖾 𝗉𝗎𝖻𝗅𝗂𝖼𝗅𝗒 𝖻𝖺𝗇𝗇𝖾𝖽; 𝗌𝗉𝖺𝗆𝗆𝖾𝗋𝗌, 𝖺𝗇𝗇𝗈𝗒𝖺𝗇𝖼𝖾𝗌, 𝗈𝗋 𝗃𝗎𝗌𝗍 𝗍𝗋𝗈𝗅𝗅𝗌.  
