@@ -15,11 +15,12 @@ Here Is The Help For My Commands.</b>"""
 ©️MᴀɪɴᴛᴀɪɴᴇD Bʏ  <a href=https://t.me/MOVIECLUB_CHAT>Mᴏᴠɪᴇ Cʟᴜʙ</a>"""
     SOURCE_TXT = """
 <code>All the files in this bot are freely available on the internet or posted by somebody else.This bot is indexing files which are already uploaded on Telegram for easy of searching, We respect all the copyright laws and works in compliance with DMCA and EUCD. If anything is against law please contact us so that it can be removed asap.</code>"""
-    SONG_TXT ="""<b>Help SONG
-Bot Sends The Request Songs, For Those Who Love Music
+    SONG_TXT ="""<b>Help: Music
 
-- /song [Song Name] - To Download Music
-- Working Pm And Groups</b>"""
+Music download modules, for those who love music.
+
+Commands and Usage:
+• /song or /mp3 (songname) - download song from yt servers.</b>"""
     JSON_TXT ="""<b>Help JSON:
 𝖡𝗈𝗍 𝗋𝖾𝗍𝗎𝗋𝗇𝗌 𝗃𝗌𝗈𝗇 𝖿𝗈𝗋 𝖺𝗅𝗅 𝗋𝖾𝗉𝗅𝗂𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝗐𝗂𝗍𝗁 /json. 
 𝖥𝖾𝖺𝗍𝗎𝗋𝖾𝗌:
