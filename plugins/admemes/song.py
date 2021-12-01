@@ -19,13 +19,13 @@ def time_to_seconds(time):
 
 ## Commands --------------------------------
 
-@Client.on_message(filters.command("song") & ~filters.channel & ~filters.edited)
+@Client.on_message(filters.command(["song", "mp3"]) & ~filters.channel & ~filters.edited)
 def a(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`💞𝑭𝒊𝒏𝒅𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈🎸.....`')
+    m = message.reply('`Searching... Please Wait...`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -49,28 +49,28 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[ʟᴀʟʟᴜs ᴍᴜsɪᴄ]" 
+            performer = f"[Nᴀᴛᴀʟɪᴀ Dʏᴇʀ]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
             print(e)
-            m.edit('**𝐈 𝐚𝐦 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐫𝐞𝐬𝐮𝐥𝐭 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐫𝐞𝐪𝐮𝐞𝐬𝐭💔. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐭𝐫𝐲 𝐚𝐧𝐨𝐭𝐡𝐞𝐫 𝐬𝐨𝐧𝐠 𝐨𝐫 𝐮𝐬𝐞 𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐬𝐩𝐞𝐥𝐥𝐢𝐧𝐠💞!**')
+            m.edit('**Found Literary Noting. Please Try Another Song or Use Correct Spelling!**')
             return
     except Exception as e:
         m.edit(
-            "**𝐄𝐧𝐭𝐞𝐫 𝐒𝐨𝐧𝐠 𝐍𝐚𝐦𝐞 𝐰𝐢𝐭𝐡 𝐂𝐨𝐦𝐦𝐚𝐧𝐝💞**❗\nFor 𝐄𝐱𝐚𝐦𝐩𝐥𝐞: `/song Alone Marshmellow`"
+            "**Enter Song Name with Command**❗\nFor Example: `/song Monody`"
         )
         print(str(e))
         return
-    m.edit("`𝑼𝒑𝒍𝒐𝒂𝒅𝒊𝒏𝒈🎸....𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕💞`")
+    m.edit("`Uploading... Please Wait...`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎹 <b>𝑻𝒊𝒕𝒍𝒆:</b> <a href="{link}">{title}</a>\n🎙️ <b>𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏:</b> <code>{duration}</code>\n🎵 <b>𝑽𝒊𝒆𝒘𝒔:</b> <code>{views}</code>\n🎸 <b>𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝒃𝒚:</b> {message.from_user.mention()} \n🎶 <b>𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚: @team_annaben</b> 👑'
+        rep = f'🏷 <b>Title:</b> <a href="{link}">{title}</a>\n⏳ <b>Duration:</b> <code>{duration}</code>\n👀 <b>Views:</b> <code>{views}</code>\n🎧 <b>Requested By:</b> {message.from_user.mention()}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -79,7 +79,7 @@ def a(client, message):
         m.delete()
         message.delete()
     except Exception as e:
-        m.edit('**𝐀𝐧 𝐄𝐫𝐫𝐨𝐫 𝐎𝐜𝐜𝐮𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐑𝐞𝐩𝐨𝐫𝐭 𝐓𝐡𝐢𝐬 𝐓𝐨 @pro_Editor_tg !!**')
+        m.edit('**An Error Occured.!!')
         print(e)
     try:
         os.remove(audio_file)
