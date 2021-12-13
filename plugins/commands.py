@@ -235,8 +235,7 @@ async def delete_all_index_confirm(bot, message):
 
 @Client.on_message(filters.command("help"))
 async def help(client, message):
-    if message.chat.type in ['group', 'supergroup']:
-        buttons = [[
+    buttons = [[
             InlineKeyboardButton('Filters', callback_data='auto_manual'),
             InlineKeyboardButton('Connection', callback_data='coct'),
             InlineKeyboardButton('Misc', callback_data='info')
@@ -252,12 +251,12 @@ async def help(client, message):
             InlineKeyboardButton('Back', callback_data='start'), 
             InlineKeyboardButton('Status', callback_data='stats'),
             InlineKeyboardButton('Inactive', callback_data='zombies')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
-        return
+     ]]
+     reply_markup = InlineKeyboardMarkup(buttons)
+     await message.reply_photo(
+         photo=random.choice(PICS),
+         caption=script.HELP_TXT.format(query.from_user.mention),
+         reply_markup=reply_markup,
+         parse_mode='html'
+     )
+     return
