@@ -233,3 +233,29 @@ async def delete_all_index_confirm(bot, message):
     await message.answer()
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
+@Client.on_message(filters.command("help"))
+async def start(client, message):
+    if message.chat.type in ['group', 'supergroup']:
+        buttons = [[
+            InlineKeyboardButton('Filters', callback_data='auto_manual'),
+            InlineKeyboardButton('Connection', callback_data='coct'),
+            InlineKeyboardButton('Misc', callback_data='info')
+            ],[
+            InlineKeyboardButton('Fun', callback_data='fun'),
+            InlineKeyboardButton('Song', callback_data='song'),
+            InlineKeyboardButton('Tgraph', callback_data='tgraph')
+            ],[
+            InlineKeyboardButton('PIN', callback_data='pin'),
+            InlineKeyboardButton('Json', callback_data='json'),
+            InlineKeyboardButton('Bans', callback_data='restric')
+            ],[
+            InlineKeyboardButton('Back', callback_data='start'), 
+            InlineKeyboardButton('Status', callback_data='stats'),
+            InlineKeyboardButton('Inactive', callback_data='zombies')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
