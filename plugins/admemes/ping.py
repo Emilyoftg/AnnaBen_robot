@@ -18,10 +18,8 @@ REPO = "നമ്മൾ നമ്മൾ പോലുമറിയാതെ അധ
 async def check_alive(_, message):
     await message.reply_text(ALIVE)
 
-
-@Client.on_message(filters.command("help", COMMAND_HAND_LER) & f_onw_fliter)
-async def start(client, message):
-    if message.chat.type in ['group', 'supergroup']:
+@Client.on_message(filters.command("help"))
+async def help(client, message):
         buttons = [[
             InlineKeyboardButton('Filters', callback_data='auto_manual'),
             InlineKeyboardButton('Connection', callback_data='coct'),
@@ -40,8 +38,9 @@ async def start(client, message):
             InlineKeyboardButton('Inactive', callback_data='zombies')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
         )
