@@ -1,49 +1,46 @@
-# Remove this line before deploying
-_____REMOVE_THIS_LINE_____=True
 # REQUIRED CONFIG
-BOT_TOKEN = ""
-GDRIVE_FOLDER_ID = ""
-OWNER_ID =
+BOT_TOKEN = "5404816525:AAGKBY-DFYJ94VrQmoyW7HAgM4-FlZOf6us"
+GDRIVE_FOLDER_ID = "1Jn6ZI4dfsKDel2dL61l0TN07aL_VR_e8"
+OWNER_ID = 5394954571
 DOWNLOAD_DIR = "/usr/src/app/downloads"
 DOWNLOAD_STATUS_UPDATE_INTERVAL = 10
 AUTO_DELETE_MESSAGE_DURATION = 20
-AUTO_DELETE_UPLOAD_MESSAGE_DURATION = -1
-IS_TEAM_DRIVE = ""
-TELEGRAM_API =
-TELEGRAM_HASH = ""
+IS_TEAM_DRIVE = "True"
+TELEGRAM_API = 19680279
+TELEGRAM_HASH = "a32f974ade51b2dc74e8db4bb049ad01"
 # OPTIONAL CONFIG
-DATABASE_URL = ""
-AUTHORIZED_CHATS = ""
+DATABASE_URL = "postgres://btspyfogatfdug:2bea221c010014c0ac13a0791ee1eb3083eaeeeb41d6cf865a5fb6e1fb03439a@ec2-34-242-8-97.eu-west-1.compute.amazonaws.com:5432/d9lr9ieg1dmu9p"
+AUTHORIZED_CHATS = "-1001760385398"
 SUDO_USERS = ""
 IGNORE_PENDING_REQUESTS = ""
 USE_SERVICE_ACCOUNTS = ""
-INDEX_URL = ""
+INDEX_URL = "https://nickmirror.teamnxtgeneration.workers.dev/3:/LeexhArena"
 STATUS_LIMIT = ""
-STOP_DUPLICATE = ""
+STOP_DUPLICATE = "True"
 CMD_INDEX = ""
 UPTOBOX_TOKEN = ""
 TORRENT_TIMEOUT = ""
 EXTENTION_FILTER = ""
-INCOMPLETE_TASK_NOTIFIER = ""
+INCOMPLETE_TASK_NOTIFIER = "True"
 # Update
-UPSTREAM_REPO = ""
+UPSTREAM_REPO = "https://github.com/Emilyoftg/helios-mirror"
 UPSTREAM_BRANCH = ""
 # Mirror
-MIRROR_LOGS = ""
+MIRROR_LOGS = "-1001745032876"
 # Leech
-BOT_PM = ""
-LEECH_LOG = ""
+BOT_PM = "False"
+LEECH_LOG = "-1001532003946"
 TG_SPLIT_SIZE = ""
-AS_DOCUMENT = ""
+AS_DOCUMENT = "True"
 EQUAL_SPLITS = ""
 CUSTOM_FILENAME = ""
 #Telegraph ui
-TITLE_NAME = "Helios-Mirror-Search"
-AUTHOR_NAME = "Helios-mirror"
-AUTHOR_URL = "https://t.me/heliosmirror"
-GD_INFO = "Uploaded by Arsh Sisodiya"
+TITLE_NAME = "LeexhArena-Mirror-Search"
+AUTHOR_NAME = "LeexhArena-mirror"
+AUTHOR_URL = "https://t.me/NickxFury"
+GD_INFO = "Uploaded by Leexh Arena"
 # qBittorrent
-BASE_URL_OF_BOT = ""
+BASE_URL_OF_BOT = "https://glacial-badlands-90710.herokuapp.com/"
 SERVER_PORT = ""
 WEB_PINCODE = ""
 QB_SEED = ""
@@ -54,23 +51,23 @@ RSS_CHAT_ID = ""
 USER_SESSION_STRING = ""
 # Private Files
 ACCOUNTS_ZIP_URL = ""
-TOKEN_PICKLE_URL = ""
+TOKEN_PICKLE_URL = "https://instant-link-01.herokuapp.com/DX_botz/1017/token.pickle"
 MULTI_SEARCH_URL = ""
 YT_COOKIES_URL = ""
 NETRC_URL = ""
 # Mega
 MEGAREST = ""
-MEGA_API_KEY = ""
-MEGA_EMAIL_ID = ""
-MEGA_PASSWORD = ""
+MEGA_API_KEY = "rTYHUZrZ"
+MEGA_EMAIL_ID = "abhishekbijujohn23@gmail.com"
+MEGA_PASSWORD = "abhishek@2003"
 # Shortener
 SHORTENER = ""
 SHORTENER_API = ""
 # GDTOT COOKIE
-CRYPT = ""
+CRYPT = "czc2RDRyQVhxdUFITVZRZzNOK1ZNMEYyVmpLVURNQytGSkhUUnNKN1o3ND0%3D; _gat_gtag_UA_130203604_4=1"
 # Appdrive
-APPDRIVE_EMAIL = ""
-APPDRIVE_PASS = ""
+APPDRIVE_EMAIL = "teamnxtgeneration@gmail.com"
+APPDRIVE_PASS = "generation@2003"
 # Size Limits
 TORRENT_DIRECT_LIMIT = ""
 ZIP_UNZIP_LIMIT = ""
@@ -79,7 +76,7 @@ MEGA_LIMIT = ""
 STORAGE_THRESHOLD = ""
 # Buttons
 VIEW_LINK = ""
-SOURCE_LINK = ""
+SOURCE_LINK = "True"
 BUTTON_FOUR_NAME = ""
 BUTTON_FOUR_URL = ""
 BUTTON_FIVE_NAME = ""
